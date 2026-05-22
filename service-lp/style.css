@@ -712,3 +712,215 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+footer a + a {
+  margin-left: 16px;
+}
+
+/* ===========================
+   モニター告知
+   =========================== */
+.monitor-notice {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 12px 20px;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+/* ===========================
+   譲渡対応ボックス
+   =========================== */
+.transfer-box {
+  margin-top: 24px;
+  border: 1px solid var(--color-border);
+  padding: 28px 28px;
+  background: var(--color-bg);
+}
+
+.transfer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .transfer-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+.transfer-label {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 6px;
+}
+
+.transfer-price {
+  font-family: var(--font-main);
+  font-size: 24px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.transfer-price span {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+.transfer-desc {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  flex: 1;
+}
+
+/* ===========================
+   管理型・譲渡型
+   =========================== */
+#delivery {
+  background: var(--color-bg);
+}
+
+.delivery-box {
+  border: 1px solid var(--color-border);
+  padding: 36px 28px;
+  background: var(--color-surface);
+}
+
+.delivery-lead {
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+.delivery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .delivery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.delivery-item {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 24px 20px;
+}
+
+.delivery-item-title {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+}
+
+.delivery-item p {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.9;
+}
+
+/* ===========================
+   サンプル注記
+   =========================== */
+.sample-note {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+  margin-top: -8px;
+}
+
+/* ===========================
+   自己紹介 noteリンク
+   =========================== */
+.about-note-link {
+  margin-top: 28px;
+}
+
+/* ===========================
+   CTA 連絡先テキスト
+   =========================== */
+.cta-contact-info {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.cta-contact-info a {
+  color: var(--color-gold);
+}
+
+@media (min-width: 480px) {
+  .cta-contact-info {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+/* ===========================
+   スマホ表示調整
+   =========================== */
+@media (max-width: 480px) {
+  section {
+    padding: 56px 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .plan-card {
+    padding: 24px 18px;
+  }
+
+  .plan-price {
+    font-size: 24px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+    padding: 18px 0;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+  }
+
+  .btn-lg {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+
+  .transfer-box {
+    padding: 20px 16px;
+  }
+
+  .delivery-box {
+    padding: 24px 16px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .monitor-notice {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+}
