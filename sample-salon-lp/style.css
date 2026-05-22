@@ -1,0 +1,630 @@
+/* ===========================
+   Re:calm サロンLP スタイル
+   =========================== */
+
+:root {
+  --color-bg: #faf8f5;
+  --color-white: #ffffff;
+  --color-primary: #8b6f5e;
+  --color-dark: #3a2e28;
+  --color-text: #4a3f38;
+  --color-text-light: #7a6e68;
+  --color-border: #e0d5cc;
+  --color-accent: #c9a882;
+  --font-main: 'Hiragino Mincho ProN', 'Yu Mincho', 'Georgia', serif;
+  --font-sub: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sub);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===========================
+   サンプル表記
+   =========================== */
+.sample-badge {
+  background: #333;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  padding: 6px;
+  letter-spacing: 0.1em;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+header {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-main);
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+}
+
+.logo span {
+  font-size: 11px;
+  display: block;
+  letter-spacing: 0.2em;
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+  nav a {
+    font-size: 13px;
+    color: var(--color-text-light);
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* ===========================
+   セクション共通
+   =========================== */
+section {
+  padding: 64px 20px;
+}
+
+.section-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: 22px;
+  color: var(--color-dark);
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--color-accent);
+  margin: 16px auto 32px;
+}
+
+/* ===========================
+   ファーストビュー
+   =========================== */
+#hero {
+  background: linear-gradient(160deg, #e8ddd5 0%, #f5efe9 60%, #faf8f5 100%);
+  padding: 80px 20px 80px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-main);
+  font-size: clamp(26px, 5vw, 38px);
+  color: var(--color-dark);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+}
+
+@media (min-width: 480px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+}
+
+/* ===========================
+   ボタン
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: var(--color-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-lg {
+  padding: 18px 40px;
+  font-size: 15px;
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* ===========================
+   お悩み
+   =========================== */
+#worries {
+  background: var(--color-white);
+}
+
+.worries-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.worries-list li {
+  padding: 20px 24px;
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-accent);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.worries-list li::before {
+  content: "… ";
+  color: var(--color-accent);
+}
+
+/* ===========================
+   About
+   =========================== */
+#about {
+  background: var(--color-bg);
+}
+
+.about-text {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.tag {
+  padding: 6px 16px;
+  border: 1px solid var(--color-border);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+}
+
+/* ===========================
+   メニュー・料金
+   =========================== */
+#menu {
+  background: var(--color-white);
+}
+
+.menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.menu-card {
+  padding: 32px 24px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.menu-card .duration {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.menu-card .name {
+  font-family: var(--font-main);
+  font-size: 20px;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.menu-card .price {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.menu-card .price span {
+  font-size: 13px;
+}
+
+.menu-note {
+  font-size: 12px;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* ===========================
+   選ばれる理由
+   =========================== */
+#reasons {
+  background: var(--color-bg);
+}
+
+.reasons-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reasons-list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.reason-num {
+  font-size: 28px;
+  font-family: var(--font-main);
+  color: var(--color-border);
+  line-height: 1;
+  min-width: 40px;
+}
+
+.reason-content .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+}
+
+.reason-content .desc {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+/* ===========================
+   施術の流れ
+   =========================== */
+#flow {
+  background: var(--color-white);
+}
+
+.flow-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-item {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.flow-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.flow-step {
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.flow-content .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+  padding-top: 8px;
+}
+
+.flow-content .desc {
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+/* ===========================
+   お客様の声
+   =========================== */
+#voices {
+  background: var(--color-bg);
+}
+
+.voices-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .voices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.voice-card {
+  background: var(--color-white);
+  padding: 28px 24px;
+  border: 1px solid var(--color-border);
+}
+
+.voice-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.voice-text::before {
+  content: '「';
+  color: var(--color-accent);
+}
+
+.voice-text::after {
+  content: '」';
+  color: var(--color-accent);
+}
+
+.voice-meta {
+  font-size: 12px;
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+#faq {
+  background: var(--color-white);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-question {
+  padding: 20px 0;
+  font-size: 15px;
+  color: var(--color-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  padding: 0 0 20px;
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* ===========================
+   CTA
+   =========================== */
+#cta {
+  background: linear-gradient(160deg, #3a2e28, #5a4640);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#cta .section-title {
+  color: var(--color-white);
+}
+
+#cta .section-label {
+  color: var(--color-accent);
+}
+
+#cta .cta-text {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-line {
+  background: #06C755;
+  color: #fff;
+}
+
+.btn-line:hover {
+  background: #05a844;
+}
+
+.btn-insta {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-insta:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===========================
+   フッター
+   =========================== */
+footer {
+  background: var(--color-dark);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 32px 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
