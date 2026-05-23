@@ -255,6 +255,15 @@ section {
   background: rgba(255,255,255,0.08);
 }
 
+.btn-line {
+  background: #06C755;
+  color: #ffffff;
+}
+
+.btn-line:hover {
+  background: #05b34c;
+}
+
 .btn-lg {
   padding: 20px 48px;
   font-size: 15px;
