@@ -40,12 +40,18 @@
        ファーストビュー
        ============================= -->
   <section id="hero">
+    <!-- ▼ 背景オーブ（ふわっと浮遊する装飾） -->
+    <div class="hero-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
     <div class="hero-inner">
       <span class="hero-label">HP / LP PRODUCTION SERVICE</span>
       <h1 class="hero-title">
-        個人サービス向けに、<br>
-        予約・問い合わせにつながる<br>
-        <em>1ページHP/LP</em>を作ります。
+        <span class="reveal-line"><span>個人サービス向けに、</span></span>
+        <span class="reveal-line"><span>予約・問い合わせにつながる</span></span>
+        <span class="reveal-line"><span><em>1ページHP/LP</em>を作ります。</span></span>
       </h1>
       <p class="hero-sub">
         料金・予約方法・サービス内容を1ページにまとめて、<br>
@@ -55,6 +61,45 @@
       <div class="hero-buttons">
         <a href="https://lin.ee/uL7b9nwP" class="btn btn-line btn-lg" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
         <a href="#pricing" class="btn btn-outline-gold">料金を見る</a>
+      </div>
+    </div>
+    <!-- ▼ スクロール指示 -->
+    <a href="#self-sample" class="scroll-indicator" aria-label="スクロールして続きを見る">
+      <span class="scroll-indicator-text">SCROLL</span>
+      <span class="scroll-indicator-line"></span>
+    </a>
+  </section>
+
+  <!-- =============================
+       自己サンプル告知バンド
+       =============================
+       ▼ このページ自体が制作サンプル、というメッセージ -->
+  <section id="self-sample" class="self-sample-band">
+    <div class="self-sample-inner">
+      <span class="self-sample-tag">LIVE SAMPLE</span>
+      <p class="self-sample-text">
+        いまスクロールしているこのページが、<br class="sp-br">
+        <em>僕が作るLPの実物</em>です。
+      </p>
+      <p class="self-sample-sub">
+        動き・料金カード・FAQ・問い合わせ導線まで、すべてHTML / CSS / JavaScriptだけで構築。<br>
+        ライブラリも外注も使わず、自分の手で書いた1ページです。
+      </p>
+      <div class="self-sample-stats">
+        <div class="stat-item">
+          <div class="stat-num">11</div>
+          <div class="stat-label">セクション</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">スマホ最適化</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">0<span>ライブラリ</span></div>
+          <div class="stat-label">外部依存なし</div>
+        </div>
       </div>
     </div>
   </section>
@@ -452,6 +497,14 @@
     </nav>
     <p class="footer-copy">© 2026 All rights reserved.</p>
   </footer>
+
+  <!-- =============================
+       スティッキーCTA（スクロール中に常時表示）
+       ============================= -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a href="https://lin.ee/uL7b9nwP" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+    <a href="#pricing" class="btn btn-outline-gold">料金を見る</a>
+  </div>
 
   <script src="./script.js"></script>
 </body>
