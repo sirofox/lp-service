@@ -52,6 +52,10 @@
     // グループごとに段階遅延を設定
     var staggerGroups = [
       { sel: '.target-list li', step: 70, max: 600 },
+      { sel: '.problem-points li', step: 80, max: 400 },
+      { sel: '.contents-grid .content-item', step: 55, max: 500 },
+      { sel: '.ba-pair', step: 120, max: 400 },
+      { sel: '.prepare-list li', step: 55, max: 400 },
       { sel: '.features-list li', step: 90, max: 700 },
       { sel: '.about-points li', step: 70, max: 500 },
       { sel: '.note-topics li', step: 70, max: 500 },
@@ -75,35 +79,41 @@
     if (heroLabel) heroLabel.style.transitionDelay = '100ms';
     var heroSub = document.querySelector('.hero-sub');
     if (heroSub) heroSub.style.transitionDelay = '900ms';
+    var heroMeta = document.querySelector('.hero-meta');
+    if (heroMeta) heroMeta.style.transitionDelay = '1000ms';
     var heroBtns = document.querySelector('.hero-buttons');
-    if (heroBtns) heroBtns.style.transitionDelay = '1050ms';
+    if (heroBtns) heroBtns.style.transitionDelay = '1150ms';
 
     // 対象セレクタを .reveal でマーク
     var revealSelectors = [
       '.hero-label',
       '.hero-title .reveal-line',
       '.hero-sub',
+      '.hero-meta',
       '.hero-buttons',
-      '.self-sample-inner > *',
       '.section-label',
       '.section-title',
       '.section-desc',
       '.divider',
+      '.problem-lead',
+      '.problem-points li',
+      '.problem-emphasis',
+      '.problem-body',
       '.target-list li',
-      '.features-list li',
+      '.contents-grid .content-item',
+      '.ba-pair',
+      '.monitor-reason',
+      '.prepare-list li',
+      '.prepare-note',
       '.about-points li',
-      '.note-topics li',
       '.flow-item',
       '.plan-card',
-      '.delivery-card',
       '.faq-item',
       '.sample-card',
       '.about-box',
-      '.note-box',
-      '.transfer-box',
-      '.monitor-notice',
       '.target-note',
-      '.cta-lead',
+      '.section-cta',
+      '.cta-disclaimer',
       '.cta-buttons'
     ];
     var items = document.querySelectorAll(revealSelectors.join(','));

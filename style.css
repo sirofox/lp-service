@@ -1493,3 +1493,288 @@ section + section {
     animation: none;
   }
 }
+
+/* =============================================
+   ▼▼▼ 相談導線リライト用セクション
+   ============================================= */
+
+/* --- 汎用：セクション内CTA --- */
+.section-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+.section-cta .btn {
+  min-width: 260px;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .section-cta .btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* --- ヒーロー補足（対象・価格） --- */
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 40px;
+}
+.hero-meta-target {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+.hero-meta-price {
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+}
+
+/* --- 2. 問題提起 --- */
+#problem {
+  background: var(--color-surface);
+}
+.problem-lead {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.problem-points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.problem-points li {
+  font-size: 15px;
+  color: var(--color-white);
+  padding: 12px 16px 12px 36px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+.problem-points li::before {
+  content: '×';
+  position: absolute;
+  left: 16px;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+.problem-emphasis {
+  font-size: 15px;
+  color: var(--color-white);
+  border-left: 2px solid var(--color-gold);
+  padding-left: 16px;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+.problem-body {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 2;
+}
+
+/* --- 4. 作れるページ内容 --- */
+#contents {
+  background: var(--color-bg);
+}
+.contents-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 520px) {
+  .contents-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .contents-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.content-item {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 16px 18px;
+  font-size: 14px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.content-item::before {
+  content: '✓';
+  color: var(--color-gold);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+@media (hover: hover) {
+  .content-item:hover {
+    border-color: rgba(201, 168, 76, 0.45);
+    transform: translateY(-2px);
+  }
+}
+
+/* --- 5. Before / After --- */
+#beforeafter {
+  background: var(--color-surface);
+}
+.ba-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.ba-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 640px) {
+  .ba-pair {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+}
+.ba-card {
+  padding: 22px 20px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  line-height: 1.8;
+  height: 100%;
+}
+.ba-before {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+}
+.ba-after {
+  background: linear-gradient(155deg, #1c1610, var(--color-surface));
+  border-color: rgba(201, 168, 76, 0.4);
+  color: var(--color-text);
+}
+.ba-tag {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+}
+.ba-before .ba-tag {
+  color: var(--color-text-muted);
+}
+.ba-after .ba-tag {
+  color: var(--color-gold);
+}
+.ba-arrow {
+  text-align: center;
+  color: var(--color-gold);
+  font-size: 22px;
+  line-height: 1;
+}
+@media (max-width: 639px) {
+  .ba-arrow {
+    transform: rotate(90deg);
+    margin: 2px 0;
+  }
+}
+
+/* --- 6. モニター理由ボックス --- */
+.monitor-reason {
+  background: linear-gradient(155deg, #1c1610, var(--color-surface));
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  padding: 30px 28px;
+  margin-bottom: 36px;
+}
+.monitor-reason-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--color-white);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.monitor-reason-body {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 2;
+  margin-bottom: 24px;
+}
+.monitor-reason .section-cta {
+  margin-top: 0;
+}
+
+/* --- 8. 相談前に必要なもの --- */
+#prepare {
+  background: var(--color-surface);
+}
+.prepare-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+@media (min-width: 520px) {
+  .prepare-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.prepare-list li {
+  font-size: 14px;
+  color: var(--color-text);
+  padding: 13px 16px 13px 32px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  position: relative;
+}
+.prepare-list li::before {
+  content: '–';
+  position: absolute;
+  left: 14px;
+  color: var(--color-gold);
+}
+.prepare-note {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 2;
+  text-align: center;
+}
+
+/* --- 10. CTA前の一文 --- */
+.cta-disclaimer {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.95;
+  max-width: 500px;
+  margin: 0 auto 36px;
+  padding: 18px 22px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* --- スマホ最適化（追加分） --- */
+@media (max-width: 480px) {
+  .hero-meta {
+    margin-bottom: 32px;
+  }
+  .monitor-reason {
+    padding: 24px 18px;
+  }
+  .monitor-reason-title {
+    font-size: 16px;
+  }
+  .problem-points li,
+  .prepare-list li {
+    font-size: 14px;
+  }
+  .ba-card {
+    padding: 18px 16px;
+  }
+  .cta-disclaimer {
+    padding: 16px 18px;
+  }
+}
