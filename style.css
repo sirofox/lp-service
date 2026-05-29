@@ -419,6 +419,8 @@ nav {
   background: var(--color-bg);
   position: relative;
 }
+/* サンプルカードを複数並べたときの余白 */
+.sample-card + .sample-card { margin-top: 28px; }
 
 .sample-tag {
   display: inline-block;
